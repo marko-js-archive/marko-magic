@@ -1,0 +1,6 @@
+{
+    "<*>": {
+        "transformer": "./lasso-attribute-transformer.js"
+    },
+    "tags-dir": "./components"
+}
