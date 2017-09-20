@@ -6,11 +6,10 @@
   "author": "Michael Rawlings <ml.rawlings@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "lasso": "^2.8.3",
-    "lasso-marko": "^2.1.0",
     "lasso-resolve-from": "^1.2.0"
   },
   "peerDependencies": {
-    "marko":"*"
+    "lasso": "*",
+    "marko": "*"
   }
 }
