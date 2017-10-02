@@ -34,10 +34,14 @@ module.exports = function(input, out) {
 
 function lassoResource(lasso, context, path) {
     return new Promise(function(resolve, reject) {
-        lasso.lassoResource(path, context, function(err, result) {
+        const result = lasso.lassoResource(path, context, function(err, result) {
             if(err) return reject(err);
             else resolve(result);
         });
+
+        if (result && result.then) {
+            result.then((data) => resolve(data))
+              .catch((err) => reject(err))
+        }
     });
 }
-
